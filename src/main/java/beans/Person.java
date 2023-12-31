@@ -7,8 +7,9 @@ import org.springframework.stereotype.Component;
 public class Person {
     private String name = "Ella";
 
-    private Parrot parrot;
+    private final Parrot parrot;
 
+//    @Autowired
     public Person(Parrot parrot) {
         this.parrot = parrot;
     }
@@ -23,10 +24,5 @@ public class Person {
 
     public Parrot getParrot() {
         return parrot;
-    }
-
-    @Autowired
-    public void setParrot(Parrot parrot) {
-        this.parrot = parrot;
     }
 }
